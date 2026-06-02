@@ -1,7 +1,7 @@
 ---
 name: voc-codeowners
-version: 1.0.1
-description: VOC codeowner tagging guidance for housecall-web. Use when the current git branch starts with VOCR-, when editing files under app/components/voice_of_customer/, or when the user mentions Voice of Customer / VOC / VOCR. Prompts to tag new VOC-owned controllers and sidekiq jobs with `codeowners CodeOwners.voice_of_customer` at the class level, and to scope VOC logic inside another team's existing class with a `CodeOwners.with_codeowners(:voice_of_customer) { ... }` block. NEVER replaces a host team's existing class-level codeowners declaration — that would silently steal on-call ownership of the entire class from the host team. Also covers frontend React/TypeScript: pass `Codeowners.VOICE_OF_CUSTOMER` to Sentry capture helpers (captureException, catchNetworkExceptions) on VOC's own call sites only, never flipping a host team's existing capture argument.
+version: 1.0.2
+description: VOC codeowner tagging guidance for housecall-web. Use when the current git branch starts with VOCR-, when editing files under app/components/voice_of_customer/, or when the user mentions Voice of Customer / VOC / VOCR. Prompts to tag new VOC-owned controllers and sidekiq jobs with `codeowners CodeOwners.voice_of_customer` at the class level, and to scope VOC logic inside another team's existing class with a `CodeOwners.with_codeowners(:voice_of_customer) { ... }` block. NEVER replaces a host team's existing class-level codeowners declaration — that would silently steal on-call ownership of the entire class from the host team. Also covers frontend React/TypeScript — pass `Codeowners.VOICE_OF_CUSTOMER` to Sentry capture helpers (captureException, catchNetworkExceptions) on VOC's own call sites only, never flipping a host team's existing capture argument.
 ---
 
 # VOC Codeowners
